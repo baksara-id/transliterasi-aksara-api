@@ -11,6 +11,8 @@ router.get('/', function (req, res, next) {
 router.post('/tojavanese', function (req, res) {
   var postData = req.body;
   var javaneseText = toJavanese(postData.text);
+  var bug = 'bug';
+  console.log(bug);
   res.json({ result: javaneseText });
 });
 
