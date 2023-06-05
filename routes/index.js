@@ -10,11 +10,11 @@ router.get('/', function (req, res, next) {
 
 router.post('/tojavanese', function (req, res) {
   var postData = req.body;
-  var javaneseText = toJavanese(postData.text);
-  var bug = 'bug';
-  console.log(bug);
-  var bug2 = 'bug2';
-  console.log(bug2);
+  var javaneseText = toJavanese(postData.text, {
+    useAccents: true,
+    useSwara: false,
+    useMurda: false,
+  });
   res.json({ hasil: javaneseText });
 });
 
