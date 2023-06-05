@@ -5,7 +5,7 @@ const { toJavanese } = require('carakanjs');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express OK' });
+  res.render('index', { title: 'Express' });
 });
 
 router.post('/tojavanese', function (req, res) {
@@ -13,7 +13,7 @@ router.post('/tojavanese', function (req, res) {
   var javaneseText = toJavanese(postData.text);
   var bug = 'bug';
   console.log(bug);
-  res.json({ result: javaneseText });
+  res.json({ resulto: javaneseText });
 });
 
 module.exports = router;
