@@ -1,12 +1,21 @@
 steps:
   # Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'app', '.']
+    args:
+      [
+        'build',
+        '-t',
+        'asia-southeast2-docker.pkg.dev/testing-baksara/app/app',
+        '.',
+      ]
+
+  # Configure Docker for Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['configure-docker']
 
   # Push the Docker image to Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args:
-      ['push', 'asia-southeast2-docker.pkg.dev/testing-baksara/app/app:v1.0.0']
+    args: ['push', 'asia-southeast2-docker.pkg.dev/testing-baksara/app/app']
 
   # Deploy to Cloud Run
   - name: 'gcr.io/cloud-builders/gcloud'
