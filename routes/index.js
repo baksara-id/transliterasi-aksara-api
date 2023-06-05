@@ -13,6 +13,8 @@ router.post('/tojavanese', function (req, res) {
   var javaneseText = toJavanese(postData.text);
   var bug = 'bug';
   console.log(bug);
+  var bug2 = 'bug2';
+  console.log(bug2);
   res.json({ hasil: javaneseText });
 });
 
