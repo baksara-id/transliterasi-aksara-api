@@ -22,7 +22,7 @@ router.post('/revtojavanese', function (req, res) {
     });
     javaneseText += javaneseSection;
     if (i < sections.length - 1) {
-      javaneseText += '@'; // Append \n delimiter if it's not the last section
+      javaneseText += '<br>'; // Append <br> for line break if it's not the last section
     }
   }
 
