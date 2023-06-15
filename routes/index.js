@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/revtojavanese', function (req, res) {
+router.post('/insidemyhead', function (req, res) {
   var postData = req.body;
   var sections = postData.text.split(/\\n/); // Split postData into sections using \n as the delimiter
 
@@ -29,14 +29,14 @@ router.post('/revtojavanese', function (req, res) {
   res.json({ hasil: javaneseText });
 });
 
-router.post('/tojavanese', function (req, res) {
-  var postData = req.body;
-  var javaneseText = toJavanese(postData.text, {
-    useAccents: true,
-    useSwara: false,
-    useMurda: false,
-  });
-  res.json({ hasil: javaneseText });
-});
+// router.post('/tojavanese', function (req, res) {
+//   var postData = req.body;
+//   var javaneseText = toJavanese(postData.text, {
+//     useAccents: true,
+//     useSwara: false,
+//     useMurda: false,
+//   });
+//   res.json({ hasil: javaneseText });
+// });
 
 module.exports = router;
