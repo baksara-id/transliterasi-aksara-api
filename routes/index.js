@@ -26,14 +26,14 @@ router.post('/insidemyhead', function (req, res) {
   res.json({ hasil: javaneseSections });
 });
 
-// router.post('/tojavanese', function (req, res) {
-//   var postData = req.body;
-//   var javaneseText = toJavanese(postData.text, {
-//     useAccents: true,
-//     useSwara: false,
-//     useMurda: false,
-//   });
-//   res.json({ hasil: javaneseText });
-// });
+router.post('/tojavanese', function (req, res) {
+  var postData = req.body;
+  var javaneseText = toJavanese(postData.text, {
+    useAccents: true,
+    useSwara: false,
+    useMurda: false,
+  });
+  res.json({ hasil: javaneseText });
+});
 
 module.exports = router;
