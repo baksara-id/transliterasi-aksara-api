@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/insidemyhead', function (req, res) {
+router.post('/reversetrans', function (req, res) {
   var postData = req.body;
   var sections = postData.text.split(/\\n/); // Split postData into sections using \n as the delimiter
 
