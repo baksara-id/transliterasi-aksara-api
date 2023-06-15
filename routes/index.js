@@ -12,7 +12,7 @@ router.post('/insidemyhead', function (req, res) {
   var postData = req.body;
   var sections = postData.text.split(/\\n/); // Split postData into sections using \n as the delimiter
 
-  var javaneseText = '';
+  var javaneseSections = [];
   for (var i = 0; i < sections.length; i++) {
     var section = sections[i];
     var javaneseSection = toJavanese(section, {
@@ -20,13 +20,10 @@ router.post('/insidemyhead', function (req, res) {
       useSwara: false,
       useMurda: false,
     });
-    javaneseText += javaneseSection;
-    if (i < sections.length - 1) {
-      javaneseText += 'xyz'; // Append <br> for line break if it's not the last section
-    }
+    javaneseSections.push(javaneseSection);
   }
 
-  res.json({ hasil: javaneseText });
+  res.json({ hasil: javaneseSections });
 });
 
 // router.post('/tojavanese', function (req, res) {
