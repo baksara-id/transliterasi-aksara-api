@@ -31,7 +31,7 @@
 <img width="954" alt="image" src="https://github.com/baksara-id/transliterasi-aksara-api/assets/32472207/5974da37-f23b-47d5-a9fb-871609cd6ac4">
 
 
-API service to translate letters, words, or sentences from latin (bahasa indonesia) to aksara jawa
+API service to translate letters, words, or sentences from latin (bahasa indonesia) to aksara jawa. This service used on Baksara APP on translator feature and after scan feature result in Baksara APP.
 
 
 
