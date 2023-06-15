@@ -23,36 +23,15 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-  </ol>
-</details>
-
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="images/about.png" alt="Logo">
+<img width="954" alt="image" src="https://github.com/baksara-id/transliterasi-aksara-api/assets/32472207/5974da37-f23b-47d5-a9fb-871609cd6ac4">
+
 
 API service to translate letters, words, or sentences from latin (bahasa indonesia) to aksara jawa
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -60,83 +39,62 @@ API service to translate letters, words, or sentences from latin (bahasa indones
 
 This API Service built using those frameworks/libraries :
 
-* [![Flask][Flask]][Flask-url]
-* [![OpenCV][OpenCV]][OpenCV-url]
-* [![NumPy][NumPy]][NumPy-url]
-* [![TensorFlow][TensorFlow]][TensorFlow-url]
-* [![Pillow][Pillow]][Pillow-url]
+* [![ExpressJS][ExpressJS]][ExpressJS-url]
+* [![CarakanJS][CarakanJS]][CarakanJS-url]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This service can used in two ways, locally and cloud.
+This service can used in two ways, local service and cloud/deployed service.
 
-<font color="red"><h2>LOCAL RUN</h2></font>
+<font color="red"><h2>LOCAL SERVICE</h2></font>
 
-Make sure that you already have PIP and Python Installation in your terminal. Here are the standard steps to install this API service:
+Make sure that you already have NodeJS Installation in your terminal. Here are the standard steps to install The API service:
 
 ### Pre-Installation
 
 Clone this repository, the example below using https way to clone. If you want to use SSH or Github CLI, you can modify as your wish
 * Git Clone
   ```sh
-  git clone https://github.com/baksara-id/python-api.git
+  git clone https://github.com/baksara-id/transliterasi-aksara-api.git
   ```
 
 ### Prerequisites
 
 Install dependencies required to run this service :
-* Install Dependencies in Requirements.txt
+* Install Dependencies in Package.json
   ```sh
-  pip install --no-cache-dir -r requirements.txt
-  ```
-To use locally, you need to modify some lines on some files. Here are the guide :
-* Change your directory to api_model
-* In main.py, comment line 9 and uncomment line 10
-  ```sh
-  # import api_model.BaksaraConst as Baksara
-  import BaksaraConst as Baksara
-  ```
-* In Scanner.py, comment line 10 and 11, uncomment line 13 and 14
-  ```sh
-  # from api_model.Kelas import Kelas
-  # from api_model.Scanner import Scanner
-
-  from Kelas import Kelas
-  from Scanner import Scanner
-  ```
-* In Kelas.py, comment line 6 and uncomment line 7
-  ```sh
-  # import api_model.BaksaraConst as BaksaraConst
-  import BaksaraConst as BaksaraConst
-  ```
-* In BaksaraConst.py, comment line 4 and uncomment line 3
-  ```sh
-  # MODEL_PATH = './save_model/model.h5'
-  MODEL_PATH = './api_model/save_model/model.h5'
+  npm install
   ```
 
 ### Run and Use The Service
 
 1. Run command, make sure your command line refers to api_model directory :
    ```sh
-   python main.py
+   npm run start
    ```
-2. Test endpoint in Postman : 
+2. Available endpoint :
+   ```sh
+   http://localhost:{PORT}/tojavanese
+   ```
+   ```sh
+   http://localhost:{PORT}/reversetrans
+   ```
+3. Test endpoint in Postman : 
+
+   <img width="641" alt="image" src="https://github.com/baksara-id/transliterasi-aksara-api/assets/32472207/ad622bbc-9b94-4639-9b60-50cdb4604c45">
+   <img width="643" alt="image" src="https://github.com/baksara-id/transliterasi-aksara-api/assets/32472207/2e629197-0d69-4809-b8f7-0446d99d467f">
 
 
 
-   <img width="653" alt="image" src="https://github.com/baksara-id/python-api/assets/32472207/61774e36-6dea-45b5-8288-7a653ba57ec2">
-   <img width="650" alt="image" src="https://github.com/baksara-id/python-api/assets/32472207/4dd5a911-dfbe-4f7e-88ef-38e8ddd96921">
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+   
 
 
-<font color="red"><h2>CLOUD RUN</h2></font>
+
+<font color="red"><h2>CLOUD SERVICE</h2></font>
 
 ### Run and Use The Service
 
@@ -146,21 +104,22 @@ To use locally, you need to modify some lines on some files. Here are the guide 
    ```
 2. Available endpoint :
    ```sh
-   https://python-api-qohpfhypea-et.a.run.app/scanner
+   https://aksara-api-v4-qohpfhypea-et.a.run.app/tojavanese
    ```
    ```sh
-   https://python-api-qohpfhypea-et.a.run.app/kelas
+   https://aksara-api-v4-qohpfhypea-et.a.run.app/reversetrans
    ```
-4. Test endpoint in Postman :
+3. Test endpoint in Postman :
 
 
 
 
-   <img width="646" alt="image" src="https://github.com/baksara-id/python-api/assets/32472207/50b593d0-43f5-4068-b9c5-c61b166426dc">
-   <img width="648" alt="image" src="https://github.com/baksara-id/python-api/assets/32472207/49f17484-8614-4348-a3ad-47ea04a07269">
+   <img width="653" alt="image" src="https://github.com/baksara-id/transliterasi-aksara-api/assets/32472207/7e7dce29-1585-4f32-840c-d7117014d8fb">
+   <img width="650" alt="image" src="https://github.com/baksara-id/transliterasi-aksara-api/assets/32472207/449ba5f8-4a52-4a9a-9601-dee722fa0aee">
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -192,6 +151,10 @@ To use locally, you need to modify some lines on some files. Here are the guide 
 [Tensorflow-url]: https://www.tensorflow.org/
 [Pillow]: https://img.shields.io/badge/-Pillow-brightgreen
 [Pillow-url]: https://pillow.readthedocs.io/en/stable/
+[ExpressJS]: https://img.shields.io/badge/-Express%20JS-lightgrey
+[ExpressJS-url]: https://expressjs.com/
+[CarakanJS]: https://img.shields.io/badge/-Carakan%20JS-yellow
+[CarakanJS-url]: https://nourman.com/works/carakanjs
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
 [Vue-url]: https://vuejs.org/
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
